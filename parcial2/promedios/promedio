@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    float calificaciones[6];
+    float calificaciones[6]= {0};
     
     float acumulador = 0;
     
@@ -20,8 +20,6 @@ int main() {
         cout << "calificaciones" <<i+1<< ": " << calificaciones[i] << endl;
     }
     
-    
-    
-    
     return 0;
 }   
+
