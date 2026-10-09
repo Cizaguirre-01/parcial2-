@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Alumno {
+
+    string nombre;
+    string matricula;
+    float  calif[3];
+};
+
+int main(){
+    const int n=5;
+    Alumno alumnos[n];
+
+    for(int i=0;i<n;i++){
+        cout<< "Ingrese el nombre del alumno: "<<i+1<<": ";
+        getline(cin, alumnos[i].nombre);
+        cout<< "Ingrese la matricula del alumno: "<<i+1<<": ";
+        getline(cin, alumnos[i].matricula);
+        
+
+        for(int j=0;j<3;j++){
+            cout<< "Ingrese la calificacion "<<j+1<<" del alumno: ";
+            cin>>alumnos[i].calif[j];
+           
+        }
+        cin.ignore();
+        cout<<'\n';
+    }
+   
+ 
+    for(int i=0;i<n;i++){
+        float promedio=0;
+        float totalPromedio=0;
+        for(int j=0;j<3;j++){
+            promedio+=alumnos[i].calif[j];
+            totalPromedio=promedio/3;
+
+        }
+        cout<< "El promedio general del alumno "<<alumnos[i].nombre<<" es: "<<totalPromedio<<'\n'<<endl; 
+        
+    }
+    return 0;
+}
