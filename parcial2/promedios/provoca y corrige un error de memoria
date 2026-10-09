@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+
+void intercambiePuntero (int*a, int*b){
+    int temporal= *a;
+    *a = *b;
+    *b = temporal;
+    
+
+}
+
+int main(){
+    int a= 5;
+    int b= 6;
+    int c= 7;
+    int*ptra= &a;
+    int*ptrb= &b;
+    int*ptrc= &c;
+    
+    cout<<" antes de intercambiar: a= "<< a << ",c="<< c << endl;
+    cout<<'\n';
+    intercambiePuntero (ptra,ptrc);
+    
+    cout<<" ya intercambiados a="<< a <<",c="<< c << endl;
+    
+    return 0;
+
+
+}
+
+/* error prueba puntero salvaje
+
+
+#include <iostream>
+using namespace std;
+
+void intercambiePuntero (int*a, int*b){
+    int temporal= *a;
+    *a = *b;
+    *b = temporal;
+    
+
+}
+
+int main(){
+    int a= 5;
+    int b= 6;
+    int*ptra= &a;
+    int*ptrb= &b;
+    int*ptrc;
+    
+    cout<<" antes de intercambiar: a= "<< a << ",c="<< b << endl;
+    cout<<'\n';
+    intercambiePuntero (ptra,ptrc);
+    
+    cout<<" ya intercambiados a="<< a <<",c="<< b << endl;
+    
+    return 0;
+
+
+}
+
+
+*/
