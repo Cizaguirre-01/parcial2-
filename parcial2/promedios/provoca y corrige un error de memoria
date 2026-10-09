@@ -12,24 +12,22 @@ void intercambiePuntero (int*a, int*b){
 int main(){
     int a= 5;
     int b= 6;
-    int c= 7;
+    
     int*ptra= &a;
     int*ptrb= &b;
-    int*ptrc= &c;
     
-    cout<<" antes de intercambiar: a= "<< a << ",c="<< c << endl;
+    cout<<" antes de intercambiar: a= "<< a << ",b="<< b << endl;
     cout<<'\n';
-    intercambiePuntero (ptra,ptrc);
+    intercambiePuntero (ptra,ptrb);
     
-    cout<<" ya intercambiados a="<< a <<",c="<< c << endl;
+    cout<<" ya intercambiados a="<< a <<",b="<< b << endl;
     
     return 0;
 
 
 }
 
-/* error prueba puntero salvaje
-
+/* Puntero salvaje ERROR
 
 #include <iostream>
 using namespace std;
@@ -45,20 +43,18 @@ void intercambiePuntero (int*a, int*b){
 int main(){
     int a= 5;
     int b= 6;
+    
     int*ptra= &a;
-    int*ptrb= &b;
-    int*ptrc;
+    int*ptrb;
     
-    cout<<" antes de intercambiar: a= "<< a << ",c="<< b << endl;
+    cout<<" antes de intercambiar: a= "<< a << ",b="<< b << endl;
     cout<<'\n';
-    intercambiePuntero (ptra,ptrc);
+    intercambiePuntero (ptra,ptrb);
     
-    cout<<" ya intercambiados a="<< a <<",c="<< b << endl;
+    cout<<" ya intercambiados a="<< a <<",b="<< b << endl;
     
     return 0;
 
 
 }
-
-
 */
