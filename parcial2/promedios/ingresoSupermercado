@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main(){
+    double ventas[100];
+    double totalVentas = 0;
+
+    srand(time(0));
+
+    for (int i = 0; i < 100; i++) {
+        ventas[i] = (rand() % 1000 + 100)/10.0;
+        cout << "El total de ventas numero  " << i + 1 << " es : " <<  ventas[i] << endl;
+        totalVentas += ventas[i];
+    }
+    cout << "El total de ventas es: " << totalVentas << endl;
+    return 0;
+}
+
+/*
+#include <iostream>
+using namespace std;
+
+int main(){
+    double ventas[100];
+    double totalVentas = 0;
+
+
+    for (int i = 0; i < 100; i++) {
+        cout << "La venta del cliente  numero  " << i + 1 << " es : "  << endl;
+        cin >> ventas[i];
+        totalVentas += ventas[i];
+    }
+    cout << "El total de ventas es: " << totalVentas << endl;
+    return 0;
+}
+*/
